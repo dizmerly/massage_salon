@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { sitePath } from '@/lib/site-config';
 
 export function SiteHeader() {
@@ -9,15 +8,15 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link className="wordmark" href={sitePath('/')} aria-label="Sculpture Beauty Studio home">
+      <a className="wordmark" href={sitePath('/')} aria-label="Sculpture Beauty Studio home">
         Sculpture <span>beauty studio</span>
-      </Link>
+      </a>
       <nav className="desktop-nav" aria-label="Main navigation">
-        <Link href={sitePath('/')}>Home</Link>
-        <Link href={sitePath('/salon/')}>Salon</Link>
-        <Link href={sitePath('/booking/')}>Booking</Link>
+        <a href={sitePath('/')}>Home</a>
+        <a href={sitePath('/salon/')}>Salon</a>
+        <a href={sitePath('/booking/')}>Booking</a>
       </nav>
-      <Link className="button button-small desktop-book" href={sitePath('/booking/')}>Book now</Link>
+      <a className="button button-small desktop-book" href={sitePath('/booking/')}>Book now</a>
       <button
         className="menu-button"
         type="button"
@@ -28,9 +27,9 @@ export function SiteHeader() {
         <span>{open ? 'Close' : 'Menu'}</span>
       </button>
       <nav className={`mobile-nav ${open ? 'is-open' : ''}`} id="mobile-menu" aria-label="Mobile navigation">
-        <Link href={sitePath('/')} onClick={() => setOpen(false)}>Home</Link>
-        <Link href={sitePath('/salon/')} onClick={() => setOpen(false)}>Salon</Link>
-        <Link href={sitePath('/booking/')} onClick={() => setOpen(false)}>Booking</Link>
+        <a href={sitePath('/')} onClick={() => setOpen(false)}>Home</a>
+        <a href={sitePath('/salon/')} onClick={() => setOpen(false)}>Salon</a>
+        <a href={sitePath('/booking/')} onClick={() => setOpen(false)}>Booking</a>
       </nav>
     </header>
   );

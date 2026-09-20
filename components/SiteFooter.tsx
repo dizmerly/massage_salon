@@ -1,18 +1,17 @@
 import { siteConfig, sitePath } from '@/lib/site-config';
-import Link from 'next/link';
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
-        <Link className="wordmark footer-wordmark" href={sitePath('/')}>
+        <a className="wordmark footer-wordmark" href={sitePath('/')}>
           Sculpture <span>beauty studio</span>
-        </Link>
+        </a>
         <p>Personalized massage and esthetic care in Austin, Texas.</p>
       </div>
       <div className="footer-links">
-        <Link href={sitePath('/salon/')}>Salon</Link>
-        <Link href={sitePath('/booking/')}>Book an appointment</Link>
+        <a href={sitePath('/salon/')}>Salon</a>
+        <a href={sitePath('/booking/')}>Book an appointment</a>
         <a href={siteConfig.instagramUrl} target="_blank" rel="noreferrer">Instagram</a>
       </div>
       <div className="footer-contact">

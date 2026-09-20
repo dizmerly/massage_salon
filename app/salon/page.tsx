@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ContactSection } from '@/components/ContactSection';
 import { ReviewsSection } from '@/components/ReviewsSection';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -77,7 +76,7 @@ export default function SalonPage() {
 
         <div className="salon-booking-link">
           <p>Ready to turn your visit into a little time for yourself?</p>
-          <Link className="button" href={sitePath('/booking/')}>Plan your visit</Link>
+          <a className="button" href={sitePath('/booking/')}>Plan your visit</a>
         </div>
       </section>
 
