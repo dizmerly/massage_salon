@@ -42,9 +42,11 @@ next-env.d.ts
 # OpenAI Sites metadata stays local except for the required hosting manifest
 /.openai/*
 !/.openai/hosting.json
+.openai
 
 # original source photos (optimized copies live in public/images)
 /ownerimage.webp
 /showcaseImage.webp
 /showcaseImage2.webp
 /showcaseImage3.webp
+
