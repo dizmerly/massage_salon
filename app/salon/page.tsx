@@ -39,13 +39,13 @@ export default function SalonPage() {
 
         <div className="editable-media-grid">
           <figure className="editable-photo-block">
-            <Image src="/images/showcaseImage3.webp" alt="An esthetic treatment in progress" fill sizes="(max-width: 760px) 92vw, 45vw" />
-            <figcaption>Photo container · replace this image anytime</figcaption>
+            <Image src="/images/salon/mask-application.webp" alt="A facial mask being applied during a treatment" fill sizes="(max-width: 760px) 92vw, 45vw" />
+            <figcaption>Personalized facial care</figcaption>
           </figure>
-          <div className="editable-photo-placeholder">
-            <span>Photo</span>
-            <p>Add another studio or treatment image here.</p>
-          </div>
+          <figure className="editable-photo-block">
+            <Image src="/images/salon/serum-application.webp" alt="Serum being applied during an esthetic treatment" fill sizes="(max-width: 760px) 92vw, 38vw" />
+            <figcaption>Professional skin treatments</figcaption>
+          </figure>
         </div>
 
         <div className="editable-copy-block text-right-block">
@@ -57,6 +57,18 @@ export default function SalonPage() {
         <div className="salon-video-grid">
           <article className="video-placeholder"><span>01</span><div className="play-mark" aria-hidden="true">▶</div><p>Add a studio video</p></article>
           <article className="video-placeholder peach-card"><span>02</span><div className="play-mark" aria-hidden="true">▶</div><p>Add a treatment video</p></article>
+        </div>
+
+        <div className="salon-photo-gallery">
+          <figure className="salon-photo salon-photo-tall">
+            <Image src="/images/salon/facial-treatment.webp" alt="Lyubov performing a facial treatment" fill sizes="(max-width: 760px) 92vw, 31vw" />
+          </figure>
+          <figure className="salon-photo">
+            <Image src="/images/salon/acne-before-after.webp" alt="Skin appearance before and after a personalized facial treatment" fill sizes="(max-width: 760px) 92vw, 31vw" />
+          </figure>
+          <figure className="salon-photo">
+            <Image src="/images/salon/skin-before-after.webp" alt="Mature skin appearance before and after esthetic care" fill sizes="(max-width: 760px) 92vw, 31vw" />
+          </figure>
         </div>
 
         <div className="salon-booking-link">

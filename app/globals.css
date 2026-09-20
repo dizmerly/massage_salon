@@ -159,6 +159,11 @@ h3 { font-size: clamp(1.5rem, 2.4vw, 2.35rem); }
 .editable-photo-placeholder span { font-family: var(--font-serif); font-size: 2.8rem; }
 .editable-photo-placeholder p { margin: 1rem 0 0; max-width: 18rem; }
 .salon-video-grid { display: grid; gap: 2vw; grid-template-columns: 1fr 1fr; }
+.salon-photo-gallery { display: grid; gap: 2vw; grid-template-columns: repeat(3, 1fr); margin-top: 2vw; }
+.salon-photo { aspect-ratio: 3 / 4; margin: 0; overflow: hidden; position: relative; }
+.salon-photo img { transition: transform 400ms ease; }
+.salon-photo:hover img { transform: scale(1.025); }
+.salon-photo-tall { margin-top: 6vh; }
 .salon-booking-link { align-items: center; border-bottom: 0.08rem solid var(--line); border-top: 0.08rem solid var(--line); display: flex; justify-content: space-between; margin-top: 10vh; padding-block: 2rem; }
 .salon-booking-link p { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw, 2.3rem); margin: 0; }
 
@@ -199,6 +204,8 @@ h3 { font-size: clamp(1.5rem, 2.4vw, 2.35rem); }
   .reviews-grid { grid-template-columns: 1fr; }
   .review-card, .review-card:not(:nth-child(3n + 1)) { border-left: 0; min-height: 18rem; padding-inline: 0; }
   .salon-video-grid { grid-template-columns: 1fr; }
+  .salon-photo-gallery { gap: 1rem; grid-template-columns: 1fr 1fr; margin-top: 1rem; }
+  .salon-photo-tall { grid-column: 1 / -1; margin-top: 0; }
   .text-right-block { margin-left: 0; }
   .salon-booking-link { align-items: flex-start; flex-direction: column; gap: 2rem; }
 }

@@ -36,6 +36,12 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+/.sites-runtime/
+/.codex/
+
+# OpenAI Sites metadata stays local except for the required hosting manifest
+/.openai/*
+!/.openai/hosting.json
 
 # original source photos (optimized copies live in public/images)
 /ownerimage.webp
