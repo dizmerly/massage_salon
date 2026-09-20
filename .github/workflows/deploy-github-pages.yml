@@ -37,6 +37,10 @@ jobs:
           GITHUB_PAGES: 'true'
       - name: Create clean page URLs
         run: |
+          # Vinext writes prefixed framework assets under massage_salon/_next,
+          # while GitHub Pages already serves the artifact at /massage_salon.
+          mv dist/client/massage_salon/_next dist/client/_next
+          rmdir dist/client/massage_salon
           mkdir -p dist/client/booking dist/client/salon
           cp dist/client/booking.html dist/client/booking/index.html
           cp dist/client/booking.rsc dist/client/booking/index.rsc
