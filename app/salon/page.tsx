@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ContactSection } from '@/components/ContactSection';
+import { ReviewsSection } from '@/components/ReviewsSection';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 
@@ -29,32 +29,43 @@ export default function SalonPage() {
         </div>
       </section>
 
-      <section className="philosophy section-shell">
-        <p className="eyebrow">The philosophy</p>
-        <div>
-          <h2>Care is most effective when it begins with attention.</h2>
-          <div className="two-column-copy">
-            <p>Lyubov takes time to understand your goals, comfort, and day-to-day needs before choosing a treatment approach. That conversation helps make every appointment both effective and deeply restorative.</p>
-            <p>The studio is intentionally quiet and personal, with one-on-one care from arrival through the end of your service. There is no rushed handoff—just thoughtful work, a calming pace, and space to breathe.</p>
+      <section className="salon-content section-shell">
+        <div className="editable-copy-block">
+          <p className="eyebrow">Studio story</p>
+          <h2>A place for your salon story.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this paragraph with the story of Sculpture Beauty Studio, Lyubov’s approach, or what clients can expect when they arrive.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Add another paragraph here whenever you are ready to share more.</p>
+        </div>
+
+        <div className="editable-media-grid">
+          <figure className="editable-photo-block">
+            <Image src="/images/showcaseImage3.webp" alt="An esthetic treatment in progress" fill sizes="(max-width: 760px) 92vw, 45vw" />
+            <figcaption>Photo container · replace this image anytime</figcaption>
+          </figure>
+          <div className="editable-photo-placeholder">
+            <span>Photo</span>
+            <p>Add another studio or treatment image here.</p>
           </div>
+        </div>
+
+        <div className="editable-copy-block text-right-block">
+          <p className="eyebrow">Your approach</p>
+          <h2>Space for another message.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Use this section for qualifications, treatment philosophy, product information, or anything clients should know before booking.</p>
+        </div>
+
+        <div className="salon-video-grid">
+          <article className="video-placeholder"><span>01</span><div className="play-mark" aria-hidden="true">▶</div><p>Add a studio video</p></article>
+          <article className="video-placeholder peach-card"><span>02</span><div className="play-mark" aria-hidden="true">▶</div><p>Add a treatment video</p></article>
+        </div>
+
+        <div className="salon-booking-link">
+          <p>Ready to turn your visit into a little time for yourself?</p>
+          <a className="button" href="/booking">Plan your visit</a>
         </div>
       </section>
 
-      <section className="process-section">
-        <div className="section-shell process-grid">
-          <div className="process-image"><Image src="/images/showcaseImage3.webp" alt="A professional esthetic treatment in progress" fill sizes="(max-width: 760px) 92vw, 48vw" /></div>
-          <div className="process-copy">
-            <p className="eyebrow">What to expect</p>
-            <h2>Your visit, at your pace.</h2>
-            <ol>
-              <li><span>01</span><div><h3>Arrive and settle in</h3><p>Begin with a conversation about your goals and how you are feeling.</p></div></li>
-              <li><span>02</span><div><h3>Receive tailored care</h3><p>Your service is adjusted to your needs, comfort, and preferences.</p></div></li>
-              <li><span>03</span><div><h3>Leave with a plan</h3><p>Finish with thoughtful guidance for supporting your results at home.</p></div></li>
-            </ol>
-            <Link className="button" href="/booking">Plan your visit</Link>
-          </div>
-        </div>
-      </section>
+      <ReviewsSection />
 
       <ContactSection />
       <SiteFooter />

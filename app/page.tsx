@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ContactSection } from '@/components/ContactSection';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { ReviewsSection } from '@/components/ReviewsSection';
 import { services } from '@/lib/site-config';
 
 export default function HomePage() {
@@ -18,8 +18,8 @@ export default function HomePage() {
             Personalized massage and esthetic treatments by Lyubov Yuzyuk, created to help you feel rested, radiant, and at ease.
           </p>
           <div className="button-row">
-            <Link className="button" href="/booking">Book an appointment</Link>
-            <Link className="text-link" href="/salon">Explore the studio <span aria-hidden="true">↗</span></Link>
+            <a className="button" href="/booking">Book an appointment</a>
+            <a className="text-link" href="/salon">Explore the studio <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div className="hero-image-wrap">
@@ -52,7 +52,7 @@ export default function HomePage() {
                 <p>{service.description}</p>
               </div>
               <p className="service-duration">{service.duration}</p>
-              <Link className="round-link" href="/booking" aria-label={`Book ${service.title}`}>↗</Link>
+              <a className="round-link" href="/booking" aria-label={`Book ${service.title}`}>↗</a>
             </article>
           ))}
         </div>
@@ -66,7 +66,7 @@ export default function HomePage() {
           <p className="eyebrow">Meet Lyubov</p>
           <h2>Skilled hands. A thoughtful point of view.</h2>
           <p>Lyubov Yuzyuk is a massage therapist and esthetician who believes care should feel personal, restorative, and never rushed. Her private Austin studio is a welcoming place to pause and reconnect.</p>
-          <Link className="text-link" href="/salon">About the studio <span aria-hidden="true">↗</span></Link>
+          <a className="text-link" href="/salon">About the studio <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
@@ -89,13 +89,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ReviewsSection />
+
       <section className="booking-banner">
         <div className="section-shell booking-banner-inner">
           <div>
             <p className="eyebrow">Ready when you are</p>
             <h2>Make space for yourself.</h2>
           </div>
-          <Link className="button button-light" href="/booking">View appointments</Link>
+          <a className="button button-light" href="/booking">View appointments</a>
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
 
 export function SiteHeader() {
@@ -8,15 +7,15 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link className="wordmark" href="/" aria-label="Sculpture Beauty Studio home">
+      <a className="wordmark" href="/" aria-label="Sculpture Beauty Studio home">
         Sculpture <span>beauty studio</span>
-      </Link>
+      </a>
       <nav className="desktop-nav" aria-label="Main navigation">
-        <Link href="/">Home</Link>
-        <Link href="/salon">Salon</Link>
-        <Link href="/booking">Booking</Link>
+        <a href="/">Home</a>
+        <a href="/salon">Salon</a>
+        <a href="/booking">Booking</a>
       </nav>
-      <Link className="button button-small desktop-book" href="/booking">Book now</Link>
+      <a className="button button-small desktop-book" href="/booking">Book now</a>
       <button
         className="menu-button"
         type="button"
@@ -27,9 +26,9 @@ export function SiteHeader() {
         <span>{open ? 'Close' : 'Menu'}</span>
       </button>
       <nav className={`mobile-nav ${open ? 'is-open' : ''}`} id="mobile-menu" aria-label="Mobile navigation">
-        <Link href="/" onClick={() => setOpen(false)}>Home</Link>
-        <Link href="/salon" onClick={() => setOpen(false)}>Salon</Link>
-        <Link href="/booking" onClick={() => setOpen(false)}>Booking</Link>
+        <a href="/" onClick={() => setOpen(false)}>Home</a>
+        <a href="/salon" onClick={() => setOpen(false)}>Salon</a>
+        <a href="/booking" onClick={() => setOpen(false)}>Booking</a>
       </nav>
     </header>
   );

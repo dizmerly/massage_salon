@@ -137,6 +137,31 @@ h3 { font-size: clamp(1.5rem, 2.4vw, 2.35rem); }
 .booking-frame-fallback p { margin: 0; }
 .booking-services { padding-top: 4vh; }
 
+.reviews-section { background: var(--rose); padding-block: 12vh; }
+.reviews-heading { align-items: end; display: grid; gap: 6vw; grid-template-columns: 1.25fr 0.75fr; margin-bottom: 7vh; }
+.reviews-heading h2 { margin-bottom: 0; max-width: 48rem; }
+.reviews-heading > p { margin-bottom: 0.5rem; max-width: 28rem; }
+.reviews-grid { border-top: 0.08rem solid rgba(70, 70, 70, 0.35); display: grid; grid-template-columns: repeat(3, 1fr); }
+.review-card { border-bottom: 0.08rem solid rgba(70, 70, 70, 0.35); margin: 0; min-height: 21rem; padding: 2rem 2.2rem 2rem 0; position: relative; }
+.review-card:not(:nth-child(3n + 1)) { border-left: 0.08rem solid rgba(70, 70, 70, 0.35); padding-left: 2.2rem; }
+.review-card > span { font-size: 0.72rem; letter-spacing: 0.14em; }
+.review-card blockquote { font-family: var(--font-serif); font-size: clamp(1.35rem, 2vw, 2rem); line-height: 1.25; margin: 3rem 0; }
+.review-card figcaption { bottom: 2rem; font-size: 0.75rem; letter-spacing: 0.12em; position: absolute; text-transform: uppercase; }
+
+.salon-content { padding-block: 13vh; }
+.editable-copy-block { max-width: 55rem; padding-bottom: 11vh; }
+.editable-copy-block > p:not(.eyebrow) { font-size: 1.08rem; max-width: 43rem; }
+.text-right-block { margin-left: auto; padding-block: 12vh; }
+.editable-media-grid { display: grid; gap: 2vw; grid-template-columns: 1.15fr 0.85fr; }
+.editable-photo-block { aspect-ratio: 4 / 3; margin: 0; position: relative; }
+.editable-photo-block figcaption { background: var(--cream); bottom: 0; font-size: 0.72rem; left: 0; letter-spacing: 0.1em; padding: 0.8rem 1rem; position: absolute; text-transform: uppercase; }
+.editable-photo-placeholder { align-items: center; aspect-ratio: 4 / 3; background: var(--sand); border: 0.08rem dashed var(--charcoal); display: flex; flex-direction: column; justify-content: center; padding: 2rem; text-align: center; }
+.editable-photo-placeholder span { font-family: var(--font-serif); font-size: 2.8rem; }
+.editable-photo-placeholder p { margin: 1rem 0 0; max-width: 18rem; }
+.salon-video-grid { display: grid; gap: 2vw; grid-template-columns: 1fr 1fr; }
+.salon-booking-link { align-items: center; border-bottom: 0.08rem solid var(--line); border-top: 0.08rem solid var(--line); display: flex; justify-content: space-between; margin-top: 10vh; padding-block: 2rem; }
+.salon-booking-link p { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw, 2.3rem); margin: 0; }
+
 @media (max-width: 48rem) {
   .site-header { grid-template-columns: 1fr auto; min-height: 9vh; padding-inline: 5vw; }
   .desktop-nav, .desktop-book { display: none; }
@@ -170,6 +195,12 @@ h3 { font-size: clamp(1.5rem, 2.4vw, 2.35rem); }
   .booking-details { border-left: 0; border-top: 0.08rem solid var(--line); padding-left: 0; padding-top: 2rem; }
   .booking-frame-wrap { min-height: 68vh; padding: 0.5rem; }
   .booking-frame-wrap iframe { height: 62vh; }
+  .reviews-heading, .editable-media-grid { gap: 2rem; grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .review-card, .review-card:not(:nth-child(3n + 1)) { border-left: 0; min-height: 18rem; padding-inline: 0; }
+  .salon-video-grid { grid-template-columns: 1fr; }
+  .text-right-block { margin-left: 0; }
+  .salon-booking-link { align-items: flex-start; flex-direction: column; gap: 2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
