@@ -1,3 +1,9 @@
+const githubPagesBasePath = '/massage_salon';
+
+export function sitePath(path: string) {
+  return `${githubPagesBasePath}${path}`;
+}
+
 export const siteConfig = {
   businessName: 'Sculpture Beauty Studio',
   ownerName: 'Lyubov Yuzyuk',
@@ -8,6 +14,9 @@ export const siteConfig = {
   bookingUrl:
     'https://book.squareup.com/appointments/k6l6fn7g5v5nal/location/L33C9MZEXWETY/services?rwg_token=AE37R_hBG62pQEQETHFPRjvz0TcXQN74PZZ1Y2m4fsrQ1_7ZJDglA3l4z52AVCkXwW4xitn3SjaNdLOhNrDgZRG8E8UlWG-dnA%3D%3D',
   instagramUrl: 'https://www.instagram.com/sculpture.atx/',
+  // Create a form at https://formspree.io, then replace this value with its
+  // endpoint (for example, https://formspree.io/f/abcdwxyz).
+  formspreeEndpoint: 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID',
 };
 
 export const services = [

@@ -1,24 +1,11 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
 import { siteConfig } from '@/lib/site-config';
 
 export function ContactForm() {
-  const [sent, setSent] = useState(false);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(`Website inquiry from ${form.get('name')}`);
-    const body = encodeURIComponent(
-      `Name: ${form.get('name')}\nEmail: ${form.get('email')}\nPhone: ${form.get('phone')}\n\n${form.get('message')}`,
-    );
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    setSent(true);
-  }
-
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" action={siteConfig.formspreeEndpoint} method="POST">
+      <input type="hidden" name="_subject" value="New Sculpture Beauty Studio website inquiry" />
       <div className="form-grid">
         <label>
           Name
@@ -38,7 +25,6 @@ export function ContactForm() {
         </label>
       </div>
       <button className="button" type="submit">Send inquiry</button>
-      {sent && <p className="form-note" role="status">Your email app should open with the message ready to send.</p>}
     </form>
   );
 }

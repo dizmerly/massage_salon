@@ -3,6 +3,8 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { services, siteConfig } from '@/lib/site-config';
 
+export const dynamic = 'force-static';
+
 export const metadata = {
   title: 'Book an Appointment | Sculpture Beauty Studio',
   description: 'Book a massage or esthetic appointment with Lyubov Yuzyuk in Austin, Texas.',

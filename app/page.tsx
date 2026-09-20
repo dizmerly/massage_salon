@@ -1,9 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { ContactSection } from '@/components/ContactSection';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { ReviewsSection } from '@/components/ReviewsSection';
-import { services } from '@/lib/site-config';
+import { services, sitePath } from '@/lib/site-config';
+
+export const dynamic = 'force-static';
 
 export default function HomePage() {
   return (
@@ -18,12 +21,12 @@ export default function HomePage() {
             Personalized massage and esthetic treatments by Lyubov Yuzyuk, created to help you feel rested, radiant, and at ease.
           </p>
           <div className="button-row">
-            <a className="button" href="/booking">Book an appointment</a>
-            <a className="text-link" href="/salon">Explore the studio <span aria-hidden="true">↗</span></a>
+            <Link className="button" href={sitePath('/booking/')}>Book an appointment</Link>
+            <Link className="text-link" href={sitePath('/salon/')}>Explore the studio <span aria-hidden="true">↗</span></Link>
           </div>
         </div>
         <div className="hero-image-wrap">
-          <Image className="hero-image" src="/images/showcaseImage.webp" alt="A facial treatment at Sculpture Beauty Studio" fill priority sizes="(max-width: 760px) 92vw, 48vw" />
+          <Image className="hero-image" src={sitePath('/images/showcaseImage.webp')} alt="A facial treatment at Sculpture Beauty Studio" fill priority sizes="(max-width: 760px) 92vw, 48vw" />
           <p className="image-note">A quiet space for thoughtful care</p>
         </div>
       </section>
@@ -52,7 +55,7 @@ export default function HomePage() {
                 <p>{service.description}</p>
               </div>
               <p className="service-duration">{service.duration}</p>
-              <a className="round-link" href="/booking" aria-label={`Book ${service.title}`}>↗</a>
+              <Link className="round-link" href={sitePath('/booking/')} aria-label={`Book ${service.title}`}>↗</Link>
             </article>
           ))}
         </div>
@@ -60,13 +63,13 @@ export default function HomePage() {
 
       <section className="owner-story section-shell">
         <div className="owner-image-wrap">
-          <Image src="/images/ownerimage.webp" alt="Lyubov Yuzyuk providing an esthetic treatment" fill sizes="(max-width: 760px) 92vw, 40vw" />
+          <Image src={sitePath('/images/ownerimage.webp')} alt="Lyubov Yuzyuk providing an esthetic treatment" fill sizes="(max-width: 760px) 92vw, 40vw" />
         </div>
         <div className="owner-copy">
           <p className="eyebrow">Meet Lyubov</p>
           <h2>Skilled hands. A thoughtful point of view.</h2>
           <p>Lyubov Yuzyuk is a massage therapist and esthetician who believes care should feel personal, restorative, and never rushed. Her private Austin studio is a welcoming place to pause and reconnect.</p>
-          <a className="text-link" href="/salon">About the studio <span aria-hidden="true">↗</span></a>
+          <Link className="text-link" href={sitePath('/salon/')}>About the studio <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
 
@@ -97,7 +100,7 @@ export default function HomePage() {
             <p className="eyebrow">Ready when you are</p>
             <h2>Make space for yourself.</h2>
           </div>
-          <a className="button button-light" href="/booking">View appointments</a>
+          <Link className="button button-light" href={sitePath('/booking/')}>View appointments</Link>
         </div>
       </section>
 

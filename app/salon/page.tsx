@@ -1,8 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { ContactSection } from '@/components/ContactSection';
 import { ReviewsSection } from '@/components/ReviewsSection';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { sitePath } from '@/lib/site-config';
+
+export const dynamic = 'force-static';
 
 export const metadata = {
   title: 'The Salon | Sculpture Beauty Studio',
@@ -22,9 +26,9 @@ export default function SalonPage() {
       </section>
 
       <section className="salon-gallery section-shell">
-        <div className="gallery-tall"><Image src="/images/ownerimage.webp" alt="Lyubov Yuzyuk in her Austin treatment studio" fill priority sizes="(max-width: 760px) 92vw, 42vw" /></div>
+        <div className="gallery-tall"><Image src={sitePath('/images/ownerimage.webp')} alt="Lyubov Yuzyuk in her Austin treatment studio" fill priority sizes="(max-width: 760px) 92vw, 42vw" /></div>
         <div className="gallery-stack">
-          <div><Image src="/images/showcaseImage2.webp" alt="Lyubov preparing for a personalized treatment" fill sizes="(max-width: 760px) 92vw, 36vw" /></div>
+          <div><Image src={sitePath('/images/showcaseImage2.webp')} alt="Lyubov preparing for a personalized treatment" fill sizes="(max-width: 760px) 92vw, 36vw" /></div>
           <p>Licensed esthetician<br />Massage therapist<br />Independent studio owner</p>
         </div>
       </section>
@@ -39,11 +43,11 @@ export default function SalonPage() {
 
         <div className="editable-media-grid">
           <figure className="editable-photo-block">
-            <Image src="/images/salon/mask-application.webp" alt="A facial mask being applied during a treatment" fill sizes="(max-width: 760px) 92vw, 45vw" />
+            <Image src={sitePath('/images/salon/mask-application.webp')} alt="A facial mask being applied during a treatment" fill sizes="(max-width: 760px) 92vw, 45vw" />
             <figcaption>Personalized facial care</figcaption>
           </figure>
           <figure className="editable-photo-block">
-            <Image src="/images/salon/serum-application.webp" alt="Serum being applied during an esthetic treatment" fill sizes="(max-width: 760px) 92vw, 38vw" />
+            <Image src={sitePath('/images/salon/serum-application.webp')} alt="Serum being applied during an esthetic treatment" fill sizes="(max-width: 760px) 92vw, 38vw" />
             <figcaption>Professional skin treatments</figcaption>
           </figure>
         </div>
@@ -61,19 +65,19 @@ export default function SalonPage() {
 
         <div className="salon-photo-gallery">
           <figure className="salon-photo salon-photo-tall">
-            <Image src="/images/salon/facial-treatment.webp" alt="Lyubov performing a facial treatment" fill sizes="(max-width: 760px) 92vw, 31vw" />
+            <Image src={sitePath('/images/salon/facial-treatment.webp')} alt="Lyubov performing a facial treatment" fill sizes="(max-width: 760px) 92vw, 31vw" />
           </figure>
           <figure className="salon-photo">
-            <Image src="/images/salon/acne-before-after.webp" alt="Skin appearance before and after a personalized facial treatment" fill sizes="(max-width: 760px) 92vw, 31vw" />
+            <Image src={sitePath('/images/salon/acne-before-after.webp')} alt="Skin appearance before and after a personalized facial treatment" fill sizes="(max-width: 760px) 92vw, 31vw" />
           </figure>
           <figure className="salon-photo">
-            <Image src="/images/salon/skin-before-after.webp" alt="Mature skin appearance before and after esthetic care" fill sizes="(max-width: 760px) 92vw, 31vw" />
+            <Image src={sitePath('/images/salon/skin-before-after.webp')} alt="Mature skin appearance before and after esthetic care" fill sizes="(max-width: 760px) 92vw, 31vw" />
           </figure>
         </div>
 
         <div className="salon-booking-link">
           <p>Ready to turn your visit into a little time for yourself?</p>
-          <a className="button" href="/booking">Plan your visit</a>
+          <Link className="button" href={sitePath('/booking/')}>Plan your visit</Link>
         </div>
       </section>
 
