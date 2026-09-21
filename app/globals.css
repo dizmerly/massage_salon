@@ -3,15 +3,15 @@
 @import 'shadcn/tailwind.css';
 
 :root {
-  --peach: #febe98;
-  --rose: #df7f83;
-  --sand: #f0cfba;
-  --cream: #f2e9d9;
-  --coral: #f87472;
-  --charcoal: #464646;
-  --paper: #fffaf4;
-  --white: #ffffff;
-  --line: rgba(70, 70, 70, 0.2);
+  --peach: #dccfc0;
+  --rose: #a1bc98;
+  --sand: #dccfc0;
+  --cream: #fdf6ed;
+  --coral: #a1bc98;
+  --charcoal: #778873;
+  --paper: #fdf6ed;
+  --white: #fdf6ed;
+  --line: rgba(119, 136, 115, 0.28);
   --font-sans: Arial, Helvetica, sans-serif;
   --font-serif: Georgia, 'Times New Roman', serif;
 }
